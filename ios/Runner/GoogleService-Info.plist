@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>72700926816-m6a9eoe018d1duqnsnuqlchgh0egfo0b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.72700926816-m6a9eoe018d1duqnsnuqlchgh0egfo0b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDYSRbE_RgNqZfMSFOylWj5iRNrmx-nWXw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>72700926816</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.genbrugsapplikation</string>
+	<key>PROJECT_ID</key>
+	<string>mitgenbrug-5579f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mitgenbrug-5579f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:72700926816:ios:afd1fadaa61440ee71dc05</string>
+</dict>
+</plist>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "72700926816",
+    "project_id": "mitgenbrug-5579f",
+    "storage_bucket": "mitgenbrug-5579f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72700926816:android:0a2a88be7b26ef9271dc05",
+        "android_client_info": {
+          "package_name": "com.mycompany.genbrugsapplikation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72700926816-r0rsaf7kui2hrul6rhsh86jvgc03fumn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrBHG7WQs1f5FiMz15yJ3qjVWWkaUFA44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72700926816-r0rsaf7kui2hrul6rhsh86jvgc03fumn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "72700926816-m6a9eoe018d1duqnsnuqlchgh0egfo0b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.genbrugsapplikation"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
