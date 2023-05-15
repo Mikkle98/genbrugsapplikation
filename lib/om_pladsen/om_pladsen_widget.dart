@@ -177,7 +177,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Nunito',
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -250,7 +250,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Nunito',
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -322,7 +322,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Nunito',
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -403,7 +403,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .titleMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),

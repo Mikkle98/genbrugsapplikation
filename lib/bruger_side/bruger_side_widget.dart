@@ -84,7 +84,7 @@ class _BrugerSideWidgetState extends State<BrugerSideWidget> {
         title: Text(
           'Min profil',
           style: FlutterFlowTheme.of(context).headlineMedium.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Nunito',
                 color: Colors.white,
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
@@ -136,7 +136,7 @@ class _BrugerSideWidgetState extends State<BrugerSideWidget> {
                           labelText: 'Fulde Navn',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelLarge.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Nunito',
                                     fontSize: 18.0,
                                   ),
                           hintText: 'Your full name...',
@@ -224,7 +224,7 @@ class _BrugerSideWidgetState extends State<BrugerSideWidget> {
                         labelText: emailAddressBrugereRecord!.email,
                         labelStyle:
                             FlutterFlowTheme.of(context).labelLarge.override(
-                                  fontFamily: 'Poppins',
+                                  fontFamily: 'Nunito',
                                   fontSize: 18.0,
                                 ),
                         hintText: 'Email',
@@ -318,7 +318,7 @@ class _BrugerSideWidgetState extends State<BrugerSideWidget> {
                           labelText: 'Telefon nummer',
                           labelStyle:
                               FlutterFlowTheme.of(context).labelLarge.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Nunito',
                                     fontSize: 18.0,
                                   ),
                           enabledBorder: UnderlineInputBorder(
@@ -441,7 +441,7 @@ class _BrugerSideWidgetState extends State<BrugerSideWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
                                             .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               fontWeight: FontWeight.normal,
                                             ),
                                       ),

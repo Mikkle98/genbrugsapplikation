@@ -58,9 +58,10 @@ class _WizardWidgetState extends State<WizardWidget> {
           title: Text(
             'Opsætningsguide',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-              fontFamily: 'Poppins',
+              fontFamily: 'Nunito',
               color: Colors.white,
-              fontSize: 22,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
             ),
           ),
           actions: [],
@@ -119,7 +120,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Nunito',
                                           color: Colors.white,
                                         ),
                                         borderSide: BorderSide(
@@ -141,7 +142,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Nunito',
                                           color:
                                           FlutterFlowTheme.of(context)
                                               .primaryBtnText,
@@ -181,7 +182,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Nunito',
                                             color:
                                             FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
@@ -197,7 +198,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Nunito',
                                             color:
                                             FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
@@ -213,7 +214,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Nunito',
                                             color:
                                             FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
@@ -233,7 +234,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -253,7 +254,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -292,7 +293,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -313,7 +314,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -334,7 +335,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -369,7 +370,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -390,7 +391,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               color: FlutterFlowTheme.of(
                                                   context)
                                                   .primaryBtnText,
@@ -416,7 +417,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Nunito',
                                           color:
                                           FlutterFlowTheme.of(context)
                                               .primaryBtnText,
@@ -453,7 +454,7 @@ class _WizardWidgetState extends State<WizardWidget> {
                                           FlutterFlowTheme.of(context)
                                               .titleSmall
                                               .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Nunito',
                                             color: Colors.white,
                                             fontSize: 22,
                                           ),

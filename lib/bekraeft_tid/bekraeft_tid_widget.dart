@@ -107,7 +107,7 @@ class _BekraeftTidWidgetState extends State<BekraeftTidWidget> {
               title: Text(
                 'Bestil tid',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       color: Colors.white,
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold,

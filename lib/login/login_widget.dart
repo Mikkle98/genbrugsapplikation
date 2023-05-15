@@ -89,12 +89,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                     labelText: 'Email adresse',
                     labelStyle:
                     FlutterFlowTheme.of(context).labelLarge.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                     ),
                     hintText: 'Indtast email',
                     hintStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                     ),
                     enabledBorder: OutlineInputBorder(
@@ -131,7 +131,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     EdgeInsetsDirectional.fromSTEB(16, 24, 16, 24),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Nunito',
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
                   ),
@@ -149,13 +149,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                       labelText: 'Kodeord',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Indsæt password',
                       hintStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -206,7 +206,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),

@@ -147,7 +147,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                     labelText: 'Email adresse',
                     labelStyle:
                     FlutterFlowTheme.of(context).labelLarge.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                     ),
                     hintText: 'Enter your email...',
@@ -191,7 +191,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                     EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Nunito',
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
                   ),
@@ -225,7 +225,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'kode',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Please enter your password...',
@@ -286,7 +286,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -320,7 +320,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'Bekræft kode',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Please enter your password...',
@@ -381,7 +381,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -415,7 +415,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'Telefon nnummer',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Write your number...',
@@ -455,7 +455,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -525,7 +525,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Nunito',
                                 fontWeight: FontWeight.normal,
                               ),
                             ),

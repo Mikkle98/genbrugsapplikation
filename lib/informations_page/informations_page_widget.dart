@@ -181,7 +181,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                           context)
                                                       .titleMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Nunito',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -208,7 +208,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Nunito',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -235,7 +235,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                             context)
                                                         .titleMedium
                                                         .override(
-                                                          fontFamily: 'Poppins',
+                                                          fontFamily: 'Nunito',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .black600,
@@ -309,7 +309,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Poppins',
+                                                                    'Nunito',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .black600,
@@ -348,7 +348,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Nunito',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -388,7 +388,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                                 .titleMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Poppins',
+                                                                      'Nunito',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .black600,
@@ -433,7 +433,7 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Nunito',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
