@@ -15,6 +15,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
+
 import 'search_page_model.dart';
 export 'search_page_model.dart';
 
@@ -73,8 +74,8 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
-              width: 50.0,
-              height: 50.0,
+              width: 50,
+              height: 50,
               child: CircularProgressIndicator(
                 color: Color(0xFF7A9E9F),
               ),
@@ -82,7 +83,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
           );
         }
         List<GenbrugsAffaldRecord> searchPageGenbrugsAffaldRecordList =
-            snapshot.data!;
+        snapshot.data!;
         return GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Scaffold(
@@ -93,13 +94,13 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 60.0,
+                borderRadius: 30,
+                borderWidth: 1,
+                buttonSize: 60,
                 icon: Icon(
                   Icons.close,
                   color: Colors.white,
-                  size: 30.0,
+                  size: 30,
                 ),
                 onPressed: () async {
                   await Navigator.push(
@@ -116,15 +117,15 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
               title: Text(
                 'Ruteplanlægger',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Poppins',
-                      color: Colors.white,
-                      fontSize: 25.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               actions: [],
               centerTitle: true,
-              elevation: 2.0,
+              elevation: 2,
             ),
             body: SafeArea(
               child: SingleChildScrollView(
@@ -132,15 +133,14 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
                       child: Container(
                         width: double.infinity,
-                        height: 60.0,
+                        height: 60,
                         decoration: BoxDecoration(
                           color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.circular(12.0),
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                          borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -154,7 +154,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                   }
                                   return ['Option 1'].where((option) {
                                     final lowercaseOption =
-                                        option.toLowerCase();
+                                    option.toLowerCase();
                                     return lowercaseOption.contains(
                                         textEditingValue.text.toLowerCase());
                                   });
@@ -167,16 +167,16 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                     options: options.toList(),
                                     onSelected: onSelected,
                                     textStyle:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    FlutterFlowTheme.of(context).bodyMedium,
                                     textHighlightStyle: TextStyle(),
-                                    elevation: 4.0,
+                                    elevation: 4,
                                     optionBackgroundColor:
-                                        FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                    FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     optionHighlightColor:
-                                        FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                    maxHeight: 200.0,
+                                    FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    maxHeight: 200,
                                   );
                                 },
                                 onSelected: (String selection) {
@@ -185,11 +185,11 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                   FocusScope.of(context).unfocus();
                                 },
                                 fieldViewBuilder: (
-                                  context,
-                                  textEditingController,
-                                  focusNode,
-                                  onEditingComplete,
-                                ) {
+                                    context,
+                                    textEditingController,
+                                    focusNode,
+                                    onEditingComplete,
+                                    ) {
                                   _model.textController = textEditingController;
                                   return TextFormField(
                                     key: _model.textFieldKey,
@@ -199,21 +199,21 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                     onChanged: (_) => EasyDebounce.debounce(
                                       '_model.textController',
                                       Duration(milliseconds: 2000),
-                                      () async {
+                                          () async {
                                         setState(() {
                                           _model
                                               .simpleSearchResults = TextSearch(
                                             searchPageGenbrugsAffaldRecordList
                                                 .map(
                                                   (record) => TextSearchItem(
-                                                      record, [
-                                                    record.genbrugsAffaldNavn!
-                                                  ]),
-                                                )
+                                                  record, [
+                                                record.genbrugsAffaldNavn!
+                                              ]),
+                                            )
                                                 .toList(),
                                           )
                                               .search(
-                                                  _model.textController.text)
+                                              _model.textController.text)
                                               .map((r) => r.object)
                                               .toList();
                                         });
@@ -231,7 +231,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
-                                          width: 1.0,
+                                          width: 1,
                                         ),
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
@@ -241,7 +241,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                       focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
-                                          width: 1.0,
+                                          width: 1,
                                         ),
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
@@ -251,7 +251,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                       errorBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
-                                          width: 1.0,
+                                          width: 1,
                                         ),
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
@@ -261,7 +261,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                       focusedErrorBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
-                                          width: 1.0,
+                                          width: 1,
                                         ),
                                         borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(4.0),
@@ -269,16 +269,16 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                         ),
                                       ),
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              24.0, 16.0, 24.0, 16.0),
+                                      EdgeInsetsDirectional.fromSTEB(
+                                          24, 16, 24, 16),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 18.0,
-                                          fontWeight: FontWeight.normal,
-                                        ),
+                                      fontFamily: 'Poppins',
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                     validator: _model.textControllerValidator
                                         .asValidator(context),
                                   );
@@ -287,13 +287,13 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
-                              borderRadius: 30.0,
-                              borderWidth: 1.0,
-                              buttonSize: 60.0,
+                              borderRadius: 30,
+                              borderWidth: 1,
+                              buttonSize: 60,
                               icon: Icon(
                                 Icons.clear,
                                 color: Color(0xFF004030),
-                                size: 30.0,
+                                size: 30,
                               ),
                               onPressed: () async {
                                 setState(() {
@@ -309,8 +309,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -320,286 +319,289 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Poppins',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBtnText,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              fontFamily: 'Poppins',
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBtnText,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
                             _model.simpleSearchResults.length.toString(),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Poppins',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBtnText,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                              fontFamily: 'Poppins',
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBtnText,
+                              fontWeight: FontWeight.normal,
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    if (!FFAppState().SearchActive)
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                        child: Builder(
-                          builder: (context) {
-                            final affaldNoSearch =
-                                searchPageGenbrugsAffaldRecordList.toList();
-                            return ListView.builder(
-                              padding: EdgeInsets.zero,
-                              shrinkWrap: true,
-                              scrollDirection: Axis.vertical,
-                              itemCount: affaldNoSearch.length,
-                              itemBuilder: (context, affaldNoSearchIndex) {
-                                final affaldNoSearchItem =
-                                    affaldNoSearch[affaldNoSearchIndex];
-                                return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 0.0, 10.0, 0.0),
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: 90.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 3.0,
-                                          color: Color(0x32000000),
-                                          offset: Offset(0.0, 1.0),
-                                        )
-                                      ],
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: ListView(
-                                            padding: EdgeInsets.zero,
-                                            scrollDirection: Axis.vertical,
+                    SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          if (!FFAppState().SearchActive)
+                            Padding(
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                              child: Builder(
+                                builder: (context) {
+                                  final affaldNoSearch =
+                                  searchPageGenbrugsAffaldRecordList
+                                      .toList();
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    shrinkWrap: true,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount: affaldNoSearch.length,
+                                    itemBuilder:
+                                        (context, affaldNoSearchIndex) {
+                                      final affaldNoSearchItem =
+                                      affaldNoSearch[affaldNoSearchIndex];
+                                      return Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            10, 3, 10,0 ),
+                                        child: Container(
+                                          width: double.infinity,
+                                          height: 90,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                blurRadius: 3,
+                                                color: Color(0x32000000),
+                                                offset: Offset(0, 1),
+                                              )
+                                            ],
+                                            borderRadius:
+                                            BorderRadius.circular(12),
+                                          ),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Container(
-                                                width: double.infinity,
-                                                height: 90.0,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 3.0,
-                                                      color: Color(0x32000000),
-                                                      offset: Offset(0.0, 1.0),
-                                                    )
-                                                  ],
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
-                                                ),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
+                                              Expanded(
+                                                child: ListView(
+                                                  padding: EdgeInsets.zero,
+                                                  scrollDirection:
+                                                  Axis.vertical,
                                                   children: [
-                                                    Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      2.0,
-                                                                      0.0,
-                                                                      2.0),
-                                                          child: Row(
+                                                    Container(
+                                                      width: double.infinity,
+                                                      height: 90,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 3,
+                                                            color: Color(
+                                                                0x32000000),
+                                                            offset:
+                                                            Offset(0, 1),
+                                                          )
+                                                        ],
+                                                        borderRadius:
+                                                        BorderRadius
+                                                            .circular(12),
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                        MainAxisSize.max,
+                                                        children: [
+                                                          Row(
                                                             mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
+                                                            MainAxisSize
+                                                                .max,
                                                             children: [
-                                                              InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  await Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              InformationsPageWidget(
-                                                                        informationsdetails:
-                                                                            affaldNoSearchItem.reference,
-                                                                      ),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                child:
-                                                                    Container(
-                                                                  width: 314.0,
-                                                                  height: 100.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryBackground,
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            12.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        children: [
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                2.0,
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                ClipRRect(
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                              child: Image.network(
-                                                                                affaldNoSearchItem.genbrugsAffaldFraktionBillede!,
-                                                                                width: 80.0,
-                                                                                fit: BoxFit.cover,
-                                                                              ),
-                                                                            ),
+                                                              Padding(
+                                                                padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                    0,
+                                                                    2,
+                                                                    0,
+                                                                    2),
+                                                                child: Row(
+                                                                  mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                                  children: [
+                                                                    InkWell(
+                                                                      splashColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                      focusColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                      hoverColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                      highlightColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                      onTap:
+                                                                          () async {
+                                                                        await Navigator
+                                                                            .push(
+                                                                          context,
+                                                                          MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                InformationsPageWidget(
+                                                                                  informationsdetails: affaldNoSearchItem.reference,
+                                                                                ),
                                                                           ),
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                5.0,
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Column(
+                                                                        );
+                                                                      },
+                                                                      child:
+                                                                      Container(
+                                                                        width:
+                                                                        314,
+                                                                        height:
+                                                                        100,
+                                                                        decoration:
+                                                                        BoxDecoration(
+                                                                          color:
+                                                                          FlutterFlowTheme.of(context).secondaryBackground,
+                                                                          borderRadius:
+                                                                          BorderRadius.circular(12),
+                                                                        ),
+                                                                        child:
+                                                                        Row(
+                                                                          mainAxisSize:
+                                                                          MainAxisSize.max,
+                                                                          children: [
+                                                                            Row(
                                                                               mainAxisSize: MainAxisSize.max,
-                                                                              mainAxisAlignment: MainAxisAlignment.center,
-                                                                              crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
-                                                                                Text(
-                                                                                  affaldNoSearchItem.genbrugsAffaldNavn!,
-                                                                                  style: FlutterFlowTheme.of(context).headlineSmall.override(
-                                                                                        fontFamily: 'Outfit',
-                                                                                        color: Color(0xFF090F13),
-                                                                                        fontSize: 20.0,
-                                                                                        fontWeight: FontWeight.bold,
-                                                                                      ),
-                                                                                ),
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    Text(
-                                                                                      'Fraktion: ',
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Poppins',
-                                                                                            fontWeight: FontWeight.bold,
-                                                                                          ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(2, 0, 0, 0),
+                                                                                  child: ClipRRect(
+                                                                                    borderRadius: BorderRadius.circular(12),
+                                                                                    child: Image.network(
+                                                                                      affaldNoSearchItem.genbrugsAffaldFraktionBillede!,
+                                                                                      width: 80,
+                                                                                      fit: BoxFit.cover,
                                                                                     ),
-                                                                                    Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        affaldNoSearchItem.genbrugsAffaldFraktion!,
-                                                                                        style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                                                              fontFamily: 'Outfit',
-                                                                                              color: Color(0xFF7C8791),
-                                                                                              fontSize: 14.0,
-                                                                                              fontWeight: FontWeight.normal,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                                Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  children: [
-                                                                                    Text(
-                                                                                      'Container:   ',
-                                                                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                            fontFamily: 'Poppins',
-                                                                                            fontWeight: FontWeight.bold,
-                                                                                          ),
-                                                                                    ),
-                                                                                    Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        affaldNoSearchItem.genbrugsAffaldContainer!,
-                                                                                        style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                                                              fontFamily: 'Outfit',
-                                                                                              color: Color(0xFFFF9100),
-                                                                                              fontSize: 14.0,
-                                                                                              fontWeight: FontWeight.normal,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
+                                                                                  ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    affaldNoSearchItem.genbrugsAffaldBidrag!,
-                                                                                    style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                  child: Column(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                    children: [
+                                                                                      Text(
+                                                                                        affaldNoSearchItem.genbrugsAffaldNavn!,
+                                                                                        style: FlutterFlowTheme.of(context).headlineSmall.override(
                                                                                           fontFamily: 'Outfit',
-                                                                                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                                                                                          fontSize: 1.0,
-                                                                                          fontWeight: FontWeight.normal,
+                                                                                          color: Color(0xFF090F13),
+                                                                                          fontSize: 20,
+                                                                                          fontWeight: FontWeight.bold,
                                                                                         ),
+                                                                                      ),
+                                                                                      Row(
+                                                                                        mainAxisSize: MainAxisSize.max,
+                                                                                        children: [
+                                                                                          Text(
+                                                                                            'Fraktion: ',
+                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Poppins',
+                                                                                              fontWeight: FontWeight.bold,
+                                                                                            ),
+                                                                                          ),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                                                                            child: Text(
+                                                                                              affaldNoSearchItem.genbrugsAffaldFraktion!,
+                                                                                              style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                                                fontFamily: 'Outfit',
+                                                                                                color: Color(0xFF7C8791),
+                                                                                                fontSize: 14,
+                                                                                                fontWeight: FontWeight.normal,
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ],
+                                                                                      ),
+                                                                                      Row(
+                                                                                        mainAxisSize: MainAxisSize.max,
+                                                                                        children: [
+                                                                                          Text(
+                                                                                            'Container:   ',
+                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                              fontFamily: 'Poppins',
+                                                                                              fontWeight: FontWeight.bold,
+                                                                                            ),
+                                                                                          ),
+                                                                                          Padding(
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                                                                            child: Text(
+                                                                                              affaldNoSearchItem.genbrugsAffaldContainer!,
+                                                                                              style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                                                fontFamily: 'Outfit',
+                                                                                                color: Color(0xFFFF9100),
+                                                                                                fontSize: 14,
+                                                                                                fontWeight: FontWeight.normal,
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ],
+                                                                                      ),
+                                                                                      Padding(
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                                                                        child: Text(
+                                                                                          affaldNoSearchItem.genbrugsAffaldBidrag!,
+                                                                                          style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                                            fontFamily: 'Outfit',
+                                                                                            color: FlutterFlowTheme.of(context).primaryBtnText,
+                                                                                            fontSize: 1,
+                                                                                            fontWeight: FontWeight.normal,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ],
                                                                                   ),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                          ),
-                                                                        ],
+                                                                          ],
+                                                                        ),
                                                                       ),
-                                                                    ],
-                                                                  ),
+                                                                    ),
+                                                                  ],
                                                                 ),
                                                               ),
                                                             ],
                                                           ),
-                                                        ),
-                                                      ],
+                                                        ],
+                                                      ),
                                                     ),
-
                                                   ],
                                                 ),
                                               ),
                                             ],
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                );
-                              },
-                            );
-                          },
-                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                              ),
+                            ),
+                        ],
                       ),
+                    ),
                     if (FFAppState().SearchActive)
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                         child: Builder(
                           builder: (context) {
                             final affaldNoSearch =
-                                _model.simpleSearchResults.toList();
+                            _model.simpleSearchResults.toList();
                             return ListView.builder(
                               padding: EdgeInsets.zero,
                               shrinkWrap: true,
@@ -607,24 +609,23 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                               itemCount: affaldNoSearch.length,
                               itemBuilder: (context, affaldNoSearchIndex) {
                                 final affaldNoSearchItem =
-                                    affaldNoSearch[affaldNoSearchIndex];
+                                affaldNoSearch[affaldNoSearchIndex];
                                 return Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 0.0, 10.0, 0.0),
+                                      10, 0, 10, 0),
                                   child: Container(
                                     width: double.infinity,
-                                    height: 90.0,
+                                    height: 90,
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       boxShadow: [
                                         BoxShadow(
-                                          blurRadius: 3.0,
+                                          blurRadius: 3,
                                           color: Color(0x32000000),
-                                          offset: Offset(0.0, 1.0),
+                                          offset: Offset(0, 1),
                                         )
                                       ],
-                                      borderRadius:
-                                          BorderRadius.circular(120.0),
+                                      borderRadius: BorderRadius.circular(120),
                                     ),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -636,217 +637,209 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                             children: [
                                               Container(
                                                 width: double.infinity,
-                                                height: 90.0,
+                                                height: 90,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   boxShadow: [
                                                     BoxShadow(
-                                                      blurRadius: 3.0,
+                                                      blurRadius: 3,
                                                       color: Color(0x32000000),
-                                                      offset: Offset(0.0, 1.0),
+                                                      offset: Offset(0, 1),
                                                     )
                                                   ],
                                                   borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
+                                                  BorderRadius.circular(12),
                                                 ),
                                                 child: InkWell(
                                                   splashColor:
-                                                      Colors.transparent,
+                                                  Colors.transparent,
                                                   focusColor:
-                                                      Colors.transparent,
+                                                  Colors.transparent,
                                                   hoverColor:
-                                                      Colors.transparent,
+                                                  Colors.transparent,
                                                   highlightColor:
-                                                      Colors.transparent,
+                                                  Colors.transparent,
                                                   onTap: () async {
                                                     await Navigator.push(
                                                       context,
                                                       MaterialPageRoute(
                                                         builder: (context) =>
                                                             InformationsPageWidget(
-                                                          informationsdetails:
+                                                              informationsdetails:
                                                               affaldNoSearchItem
                                                                   .reference,
-                                                        ),
+                                                            ),
                                                       ),
                                                     );
                                                   },
                                                   child: Row(
                                                     mainAxisSize:
-                                                        MainAxisSize.max,
+                                                    MainAxisSize.max,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    2.0,
-                                                                    2.0,
-                                                                    0.0,
-                                                                    2.0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                            2, 2, 0, 2),
                                                         child: ClipRRect(
                                                           borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      12.0),
+                                                          BorderRadius
+                                                              .circular(12),
                                                           child: Image.network(
                                                             affaldNoSearchItem
                                                                 .genbrugsAffaldFraktionBillede!,
-                                                            width: 80.0,
+                                                            width: 80,
                                                             fit: BoxFit.cover,
                                                           ),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    5.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                            5, 0, 0, 0),
                                                         child: Column(
                                                           mainAxisSize:
-                                                              MainAxisSize.max,
+                                                          MainAxisSize.max,
                                                           mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
+                                                          MainAxisAlignment
+                                                              .center,
                                                           crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
+                                                          CrossAxisAlignment
+                                                              .start,
                                                           children: [
                                                             Text(
                                                               affaldNoSearchItem
                                                                   .genbrugsAffaldNavn!,
                                                               style: FlutterFlowTheme
-                                                                      .of(context)
+                                                                  .of(context)
                                                                   .headlineSmall
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Outfit',
-                                                                    color: Color(
-                                                                        0xFF090F13),
-                                                                    fontSize:
-                                                                        20.0,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
+                                                                fontFamily:
+                                                                'Outfit',
+                                                                color: Color(
+                                                                    0xFF090F13),
+                                                                fontSize:
+                                                                20,
+                                                                fontWeight:
+                                                                FontWeight
+                                                                    .bold,
+                                                              ),
                                                             ),
                                                             Row(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               children: [
                                                                 Text(
                                                                   'Fraktion: ',
                                                                   style: FlutterFlowTheme.of(
-                                                                          context)
+                                                                      context)
                                                                       .bodyMedium
                                                                       .override(
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
+                                                                    fontFamily:
+                                                                    'Poppins',
+                                                                    fontWeight:
+                                                                    FontWeight.bold,
+                                                                  ),
                                                                 ),
                                                                 Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                                      0,
+                                                                      4,
+                                                                      0,
+                                                                      0),
                                                                   child: Text(
                                                                     affaldNoSearchItem
                                                                         .genbrugsAffaldFraktion!,
                                                                     style: FlutterFlowTheme.of(
-                                                                            context)
+                                                                        context)
                                                                         .bodySmall
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Outfit',
-                                                                          color:
-                                                                              Color(0xFF7C8791),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.normal,
-                                                                        ),
+                                                                      fontFamily:
+                                                                      'Outfit',
+                                                                      color:
+                                                                      Color(0xFF7C8791),
+                                                                      fontSize:
+                                                                      14,
+                                                                      fontWeight:
+                                                                      FontWeight.normal,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ],
                                                             ),
                                                             Row(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               children: [
                                                                 Text(
                                                                   'Container: ',
                                                                   style: FlutterFlowTheme.of(
-                                                                          context)
+                                                                      context)
                                                                       .bodyMedium
                                                                       .override(
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
+                                                                    fontFamily:
+                                                                    'Poppins',
+                                                                    fontWeight:
+                                                                    FontWeight.bold,
+                                                                  ),
                                                                 ),
                                                                 Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                                      0,
+                                                                      4,
+                                                                      0,
+                                                                      0),
                                                                   child: Text(
                                                                     affaldNoSearchItem
                                                                         .genbrugsAffaldContainer!,
                                                                     style: FlutterFlowTheme.of(
-                                                                            context)
+                                                                        context)
                                                                         .bodySmall
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Outfit',
-                                                                          color:
-                                                                              Color(0xFFFF9100),
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.normal,
-                                                                        ),
+                                                                      fontFamily:
+                                                                      'Outfit',
+                                                                      color:
+                                                                      Color(0xFFFF9100),
+                                                                      fontSize:
+                                                                      14,
+                                                                      fontWeight:
+                                                                      FontWeight.normal,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ],
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                  0,
+                                                                  4,
+                                                                  0,
+                                                                  0),
                                                               child: Text(
                                                                 affaldNoSearchItem
                                                                     .genbrugsAffaldBidrag!,
                                                                 style: FlutterFlowTheme.of(
-                                                                        context)
+                                                                    context)
                                                                     .bodySmall
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Outfit',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primaryBtnText,
-                                                                      fontSize:
-                                                                          1.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .normal,
-                                                                    ),
+                                                                  fontFamily:
+                                                                  'Outfit',
+                                                                  color: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .primaryBtnText,
+                                                                  fontSize:
+                                                                  1,
+                                                                  fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                                ),
                                                               ),
                                                             ),
                                                           ],
@@ -854,29 +847,26 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    20.0,
-                                                                    0.0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0, 0,
+                                                            20, 0),
                                                         child:
-                                                            FlutterFlowIconButton(
+                                                        FlutterFlowIconButton(
                                                           borderColor: Colors
                                                               .transparent,
-                                                          borderRadius: 30.0,
-                                                          borderWidth: 1.0,
-                                                          buttonSize: 60.0,
+                                                          borderRadius: 30,
+                                                          borderWidth: 1,
+                                                          buttonSize: 60,
                                                           icon: Icon(
                                                             Icons.add,
                                                             color: FlutterFlowTheme
-                                                                    .of(context)
+                                                                .of(context)
                                                                 .primaryText,
-                                                            size: 30.0,
+                                                            size: 30,
                                                           ),
                                                           onPressed: () async {
                                                             final valgtAffaldCreateData =
-                                                                createValgtAffaldRecordData(
+                                                            createValgtAffaldRecordData(
                                                               genbrugspladsAffaldNavn: _model
                                                                   .simpleSearchResults
                                                                   .first
@@ -890,19 +880,19 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                   .first
                                                                   .genbrugsAffaldFraktion,
                                                               billede:
-                                                                  affaldNoSearchItem
-                                                                      .genbrugsAffaldBillede,
+                                                              affaldNoSearchItem
+                                                                  .genbrugsAffaldBillede,
                                                               bidragfragenbrugspladsaffald:
-                                                                  affaldNoSearchItem
-                                                                      .genbrugsAffaldBidrag,
+                                                              affaldNoSearchItem
+                                                                  .genbrugsAffaldBidrag,
                                                             );
                                                             await ValgtAffaldRecord
                                                                 .collection
                                                                 .doc()
                                                                 .set(
-                                                                    valgtAffaldCreateData);
+                                                                valgtAffaldCreateData);
                                                             ScaffoldMessenger
-                                                                    .of(context)
+                                                                .of(context)
                                                                 .showSnackBar(
                                                               SnackBar(
                                                                 content: Text(
@@ -911,18 +901,18 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                       .getFont(
                                                                     'Roboto',
                                                                     color: FlutterFlowTheme.of(
-                                                                            context)
+                                                                        context)
                                                                         .primaryBtnText,
                                                                     fontSize:
-                                                                        18.0,
+                                                                    18,
                                                                   ),
                                                                 ),
                                                                 duration: Duration(
                                                                     milliseconds:
-                                                                        1500),
+                                                                    1500),
                                                                 backgroundColor:
-                                                                    Color(
-                                                                        0xFF083B04),
+                                                                Color(
+                                                                    0xFF083B04),
                                                               ),
                                                             );
                                                           },
@@ -945,8 +935,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                         ),
                       ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 20.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
                       child: FFButtonWidget(
                         onPressed: () async {
                           await Navigator.push(
@@ -959,27 +948,26 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                         text: 'Se valgt affald',
                         icon: Icon(
                           Icons.alt_route,
-                          size: 30.0,
+                          size: 30,
                         ),
                         options: FFButtonOptions(
-                          width: 340.0,
-                          height: 70.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
+                          width: 340,
+                          height: 70,
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                           color: Color(0xFF228B22),
                           textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                    fontSize: 25.0,
-                                  ),
+                          FlutterFlowTheme.of(context).titleSmall.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                            fontSize: 25,
+                          ),
                           borderSide: BorderSide(
                             color: Colors.transparent,
-                            width: 1.0,
+                            width: 1,
                           ),
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),

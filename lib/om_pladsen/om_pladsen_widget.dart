@@ -124,7 +124,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
                   child: Container(
                     width: 1000,
-                    height: 600,
+                    height: 650,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBtnText,
                       borderRadius: BorderRadius.circular(15),
@@ -222,7 +222,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                     fontFamily: 'Nunito',
                                     color: FlutterFlowTheme.of(context)
                                         .black600,
-                                    fontSize: 15,
+                                    fontSize: 13,
                                     fontWeight: FontWeight.normal,
                                   ),
                                 );
@@ -293,7 +293,7 @@ class _OmPladsenWidgetState extends State<OmPladsenWidget> {
                                         fontFamily: 'Nunito',
                                         color: FlutterFlowTheme.of(context)
                                             .black600,
-                                        fontSize: 15,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     );

@@ -238,7 +238,7 @@ class _BestiltidtidWidgetState extends State<BestiltidtidWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Container(
                     width: 350.0,
-                    height: 550.0,
+                    height: 490.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(10.0),

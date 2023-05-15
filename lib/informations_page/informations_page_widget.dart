@@ -2,11 +2,13 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/home_page_v2/home_page_v2_widget.dart';
 import '/search_page/search_page_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'informations_page_model.dart';
 export 'informations_page_model.dart';
 
@@ -51,8 +53,8 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
-              width: 50.0,
-              height: 50.0,
+              width: 50,
+              height: 50,
               child: CircularProgressIndicator(
                 color: Color(0xFF7A9E9F),
               ),
@@ -63,6 +65,66 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: Color(0xFF004030),
+          appBar: AppBar(
+            backgroundColor: Color(0xFF004030),
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30,
+              borderWidth: 1,
+              buttonSize: 60,
+              icon: Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.white,
+                size: 30,
+              ),
+              onPressed: () async {
+                await Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    duration: Duration(milliseconds: 350),
+                    reverseDuration: Duration(milliseconds: 350),
+                    child: SearchPageWidget(),
+                  ),
+                );
+              },
+            ),
+            title: Text(
+              'Information',
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                fontFamily: 'Nunito',
+                color: FlutterFlowTheme.of(context).primaryBtnText,
+                fontSize: 25,
+              ),
+            ),
+            actions: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                child: FlutterFlowIconButton(
+                  borderColor: Colors.transparent,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  buttonSize: 60,
+                  icon: Icon(
+                    Icons.home,
+                    color: FlutterFlowTheme.of(context).primaryBtnText,
+                    size: 30,
+                  ),
+                  onPressed: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePageV2Widget(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+            centerTitle: true,
+            elevation: 2,
+          ),
           body: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -77,10 +139,10 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                           Stack(
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    5.0, 5.0, 5.0, 0.0),
+                                padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 5, 0),
                                 child:
-                                    StreamBuilder<List<GenbrugsAffaldRecord>>(
+                                StreamBuilder<List<GenbrugsAffaldRecord>>(
                                   stream: queryGenbrugsAffaldRecord(
                                     singleRecord: true,
                                   ),
@@ -89,8 +151,8 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                     if (!snapshot.hasData) {
                                       return Center(
                                         child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
+                                          width: 50,
+                                          height: 50,
                                           child: CircularProgressIndicator(
                                             color: Color(0xFF7A9E9F),
                                           ),
@@ -98,72 +160,49 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                       );
                                     }
                                     List<GenbrugsAffaldRecord>
-                                        imageGenbrugsAffaldRecordList =
-                                        snapshot.data!;
+                                    imageGenbrugsAffaldRecordList =
+                                    snapshot.data!;
                                     // Return an empty Container when the item does not exist.
                                     if (snapshot.data!.isEmpty) {
                                       return Container();
                                     }
                                     final imageGenbrugsAffaldRecord =
-                                        imageGenbrugsAffaldRecordList.isNotEmpty
-                                            ? imageGenbrugsAffaldRecordList
-                                                .first
-                                            : null;
+                                    imageGenbrugsAffaldRecordList.isNotEmpty
+                                        ? imageGenbrugsAffaldRecordList
+                                        .first
+                                        : null;
                                     return ClipRRect(
-                                      borderRadius: BorderRadius.circular(12.0),
+                                      borderRadius: BorderRadius.circular(12),
                                       child: Image.network(
                                         informationsPageGenbrugsAffaldRecord
                                             .genbrugsAffaldFraktionBillede!,
                                         width: double.infinity,
-                                        height: 320.7,
+                                        height: 240,
                                         fit: BoxFit.contain,
                                       ),
                                     );
                                   },
                                 ),
                               ),
-                              FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30.0,
-                                borderWidth: 1.0,
-                                buttonSize: 60.0,
-                                icon: Icon(
-                                  Icons.arrow_back_rounded,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBtnText,
-                                  size: 30.0,
-                                ),
-                                onPressed: () async {
-                                  await Navigator.push(
-                                    context,
-                                    PageTransition(
-                                      type: PageTransitionType.leftToRight,
-                                      duration: Duration(milliseconds: 300),
-                                      reverseDuration:
-                                          Duration(milliseconds: 300),
-                                      child: SearchPageWidget(),
-                                    ),
-                                  );
-                                },
-                              ),
                             ],
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(27.0, 10.0, 12.0, 10.0),
+                            padding:
+                            EdgeInsetsDirectional.fromSTEB(25, 10, 12, 10),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Container(
-                                  width: 360.0,
-                                  height: 490.0,
+                                  width: 360,
+                                  height: 460,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 10.0),
+                                        0, 0, 0, 10),
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -173,23 +212,22 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 0.0, 4.0),
+                                                    .fromSTEB(10, 10, 0, 4),
                                                 child: Text(
                                                   'Information om affald',
                                                   style: FlutterFlowTheme.of(
-                                                          context)
+                                                      context)
                                                       .titleMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .black600,
-                                                        fontSize: 22.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
+                                                    fontFamily: 'Nunito',
+                                                    color:
+                                                    FlutterFlowTheme.of(
+                                                        context)
+                                                        .black600,
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                    FontWeight.bold,
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -199,24 +237,23 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                    .fromSTEB(20, 20, 20, 20),
                                                 child: Text(
                                                   informationsPageGenbrugsAffaldRecord
                                                       .genbrugsAffaldNavn!,
                                                   style: FlutterFlowTheme.of(
-                                                          context)
+                                                      context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .black600,
-                                                        fontSize: 22.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
+                                                    fontFamily: 'Nunito',
+                                                    color:
+                                                    FlutterFlowTheme.of(
+                                                        context)
+                                                        .black600,
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                    FontWeight.normal,
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -227,22 +264,21 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                               Expanded(
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          10.0, 30.0, 0.0, 0.0),
+                                                      .fromSTEB(10, 30, 0, 0),
                                                   child: Text(
                                                     'Placering på pladsen',
                                                     style: FlutterFlowTheme.of(
-                                                            context)
+                                                        context)
                                                         .titleMedium
                                                         .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .black600,
-                                                          fontSize: 22.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                      fontFamily: 'Nunito',
+                                                      color: FlutterFlowTheme
+                                                          .of(context)
+                                                          .black600,
+                                                      fontSize: 22,
+                                                      fontWeight:
+                                                      FontWeight.bold,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -253,22 +289,20 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 0.0, 0.0, 0.0),
+                                                    .fromSTEB(10, 0, 0, 0),
                                                 child: Icon(
                                                   Icons.access_time,
                                                   color: Colors.black,
-                                                  size: 30.0,
+                                                  size: 30,
                                                 ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                    .fromSTEB(20, 20, 20, 20),
                                                 child: StreamBuilder<
                                                     List<GenbrugspladsRecord>>(
                                                   stream:
-                                                      queryGenbrugspladsRecord(
+                                                  queryGenbrugspladsRecord(
                                                     singleRecord: true,
                                                   ),
                                                   builder: (context, snapshot) {
@@ -276,10 +310,10 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                     if (!snapshot.hasData) {
                                                       return Center(
                                                         child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
+                                                          width: 50,
+                                                          height: 50,
                                                           child:
-                                                              CircularProgressIndicator(
+                                                          CircularProgressIndicator(
                                                             color: Color(
                                                                 0xFF7A9E9F),
                                                           ),
@@ -287,37 +321,37 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                       );
                                                     }
                                                     List<GenbrugspladsRecord>
-                                                        textTimeGenbrugspladsRecordList =
-                                                        snapshot.data!;
+                                                    textTimeGenbrugspladsRecordList =
+                                                    snapshot.data!;
                                                     // Return an empty Container when the item does not exist.
                                                     if (snapshot
                                                         .data!.isEmpty) {
                                                       return Container();
                                                     }
                                                     final textTimeGenbrugspladsRecord =
-                                                        textTimeGenbrugspladsRecordList
-                                                                .isNotEmpty
-                                                            ? textTimeGenbrugspladsRecordList
-                                                                .first
-                                                            : null;
+                                                    textTimeGenbrugspladsRecordList
+                                                        .isNotEmpty
+                                                        ? textTimeGenbrugspladsRecordList
+                                                        .first
+                                                        : null;
                                                     return Text(
                                                       informationsPageGenbrugsAffaldRecord
                                                           .genbrugsAffaldFraktion!,
                                                       style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .black600,
-                                                                fontSize: 22.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      FlutterFlowTheme.of(
+                                                          context)
+                                                          .bodyMedium
+                                                          .override(
+                                                        fontFamily:
+                                                        'Nunito',
+                                                        color: FlutterFlowTheme.of(
+                                                            context)
+                                                            .black600,
+                                                        fontSize: 22,
+                                                        fontWeight:
+                                                        FontWeight
+                                                            .normal,
+                                                      ),
                                                     );
                                                   },
                                                 ),
@@ -329,34 +363,32 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 0.0, 0.0, 0.0),
+                                                    .fromSTEB(10, 0, 0, 0),
                                                 child: Icon(
                                                   Icons.location_pin,
                                                   color: Colors.black,
-                                                  size: 30.0,
+                                                  size: 30,
                                                 ),
                                               ),
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        20.0, 20.0, 20.0, 20.0),
+                                                    .fromSTEB(20, 20, 20, 20),
                                                 child: Text(
                                                   informationsPageGenbrugsAffaldRecord
                                                       .genbrugsAffaldContainer!,
                                                   style: FlutterFlowTheme.of(
-                                                          context)
+                                                      context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .black600,
-                                                        fontSize: 22.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
+                                                    fontFamily: 'Nunito',
+                                                    color:
+                                                    FlutterFlowTheme.of(
+                                                        context)
+                                                        .black600,
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                    FontWeight.normal,
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -366,38 +398,33 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                             children: [
                                               Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
+                                                    .fromSTEB(12, 0, 12, 0),
                                                 child: Row(
                                                   mainAxisSize:
-                                                      MainAxisSize.max,
+                                                  MainAxisSize.max,
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  30.0,
-                                                                  0.0,
-                                                                  4.0),
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(
+                                                          0, 30, 0, 4),
                                                       child: Text(
                                                         'Tommelfingerregel',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Poppins',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .black600,
-                                                                  fontSize:
-                                                                      22.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
+                                                        FlutterFlowTheme.of(
+                                                            context)
+                                                            .titleMedium
+                                                            .override(
+                                                          fontFamily:
+                                                          'Nunito',
+                                                          color: FlutterFlowTheme.of(
+                                                              context)
+                                                              .black600,
+                                                          fontSize: 22,
+                                                          fontWeight:
+                                                          FontWeight
+                                                              .bold,
+                                                        ),
                                                       ),
                                                     ),
                                                   ],
@@ -413,13 +440,13 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(10.0, 0.0,
-                                                                0.0, 0.0),
+                                                    EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                        10, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.info_outlined,
                                                       color: Colors.black,
-                                                      size: 30.0,
+                                                      size: 30,
                                                     ),
                                                   ),
                                                 ],
@@ -430,18 +457,18 @@ class _InformationsPageWidgetState extends State<InformationsPageWidget> {
                                                       .genbrugsAffaldBeskrivelse!,
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
-                                                          context)
+                                                      context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .black600,
-                                                        fontSize: 22.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
+                                                    fontFamily: 'Nunito',
+                                                    color:
+                                                    FlutterFlowTheme.of(
+                                                        context)
+                                                        .black600,
+                                                    fontSize: 22,
+                                                    fontWeight:
+                                                    FontWeight.normal,
+                                                  ),
                                                 ),
                                               ),
                                             ],

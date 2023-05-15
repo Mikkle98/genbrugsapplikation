@@ -150,7 +150,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       fontFamily: 'Poppins',
                       fontSize: 18,
                     ),
-                    hintText: 'Enter your email...',
+                    hintText: 'Skriv email adresse...',
                     hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Lexend Deca',
                       color: Colors.black,
@@ -228,7 +228,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                         fontFamily: 'Poppins',
                         fontSize: 18,
                       ),
-                      hintText: 'Please enter your password...',
+                      hintText: 'Indtast kodeord...',
                       hintStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
@@ -323,7 +323,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                         fontFamily: 'Poppins',
                         fontSize: 18,
                       ),
-                      hintText: 'Please enter your password...',
+                      hintText: 'indtast kodeord igen...',
                       hintStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
@@ -418,7 +418,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                         fontFamily: 'Poppins',
                         fontSize: 18,
                       ),
-                      hintText: 'Write your number...',
+                      hintText: 'Indtast telefon nummer...',
                       hintStyle: FlutterFlowTheme.of(context).bodyMedium,
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(

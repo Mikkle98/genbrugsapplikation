@@ -128,14 +128,14 @@ class _RewardPageWidgetState extends State<RewardPageWidget> {
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      50, 20, 0, 0),
+                                      10, 20, 10, 0),
                                   child: Text(
                                     'Tak fordi du har brugt MitGenbrug!',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
                                       fontFamily: 'Poppins',
-                                      fontSize: 20,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ),
