@@ -200,7 +200,7 @@ class _RuteplanlaeggerWidgetState extends State<RuteplanlaeggerWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Nunito',
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -293,7 +293,7 @@ class _RuteplanlaeggerWidgetState extends State<RuteplanlaeggerWidget> {
                                                           .bodyMedium
                                                           .override(
                                                         fontFamily:
-                                                        'Poppins',
+                                                        'Nunito',
                                                         fontWeight:
                                                         FontWeight.bold,
                                                       ),
@@ -368,7 +368,7 @@ class _RuteplanlaeggerWidgetState extends State<RuteplanlaeggerWidget> {
                                                           .bodyMedium
                                                           .override(
                                                         fontFamily:
-                                                        'Poppins',
+                                                        'Nunito',
                                                         fontWeight:
                                                         FontWeight.bold,
                                                       ),
@@ -432,7 +432,7 @@ class _RuteplanlaeggerWidgetState extends State<RuteplanlaeggerWidget> {
                         color: Color(0xFF008000),
                         textStyle:
                         FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Nunito',
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold,

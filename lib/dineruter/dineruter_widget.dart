@@ -125,7 +125,7 @@ class _DineruterWidgetState extends State<DineruterWidget> {
                   child: Text(
                     'Her kan du lave en ny rute',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Nunito',
                           color: FlutterFlowTheme.of(context).primaryBtnText,
                           fontSize: 20.0,
                         ),
@@ -189,7 +189,7 @@ class _DineruterWidgetState extends State<DineruterWidget> {
                   child: Text(
                     'Her kan du se dine gamle ruter',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Nunito',
                           color: FlutterFlowTheme.of(context).primaryBtnText,
                           fontSize: 20.0,
                         ),

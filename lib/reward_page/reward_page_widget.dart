@@ -69,7 +69,7 @@ class _RewardPageWidgetState extends State<RewardPageWidget> {
               title: Text(
                 'MitGenbrug',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Nunito',
                   color: Colors.white,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -134,7 +134,7 @@ class _RewardPageWidgetState extends State<RewardPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Nunito',
                                       fontSize: 16,
                                     ),
                                   ),
@@ -170,7 +170,7 @@ class _RewardPageWidgetState extends State<RewardPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              fontFamily: 'Poppins',
+                                              fontFamily: 'Nunito',
                                               fontSize: 20,
                                             ),
                                           ),

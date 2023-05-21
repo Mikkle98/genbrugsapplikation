@@ -126,7 +126,7 @@ class _QRSideWidgetState extends State<QRSideWidget>
                         'Din QR kode ',
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
-                                  fontFamily: 'Poppins',
+                                  fontFamily: 'Nunito',
                                   color: Colors.white,
                                   fontSize: 32.0,
                                   fontWeight: FontWeight.w500,
@@ -148,7 +148,7 @@ class _QRSideWidgetState extends State<QRSideWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .headlineSmall
                                       .override(
-                                        fontFamily: 'Poppins',
+                                        fontFamily: 'Nunito',
                                         color: Colors.white,
                                       ),
                                 ),
@@ -164,7 +164,7 @@ class _QRSideWidgetState extends State<QRSideWidget>
                           'Forklaring',
                           style:
                               FlutterFlowTheme.of(context).bodySmall.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Nunito',
                                     color: Colors.white,
                                   ),
                         ),
@@ -176,7 +176,7 @@ class _QRSideWidgetState extends State<QRSideWidget>
                           'Scan denne QR kode for at orientere din sorteringsvejleder om du er ankommet \n     - Scan denne i indgangen',
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Nunito',
                                     color: Color(0x9AFFFFFF),
                                   ),
                         ),

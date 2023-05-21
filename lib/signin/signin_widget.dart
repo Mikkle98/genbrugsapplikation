@@ -147,12 +147,12 @@ class _SigninWidgetState extends State<SigninWidget> {
                     labelText: 'Email adresse',
                     labelStyle:
                     FlutterFlowTheme.of(context).labelLarge.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                     ),
                     hintText: 'Skriv email adresse...',
                     hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Lexend Deca',
+                      fontFamily: 'Nunito',
                       color: Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.normal,
@@ -191,7 +191,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                     EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Nunito',
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
                   ),
@@ -225,14 +225,14 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'kode',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Indtast kodeord...',
                       hintStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Nunito',
                         color: FlutterFlowTheme.of(context).secondaryText,
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
@@ -286,7 +286,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -320,14 +320,14 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'Bekræft kode',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'indtast kodeord igen...',
                       hintStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Nunito',
                         color: FlutterFlowTheme.of(context).secondaryText,
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
@@ -381,7 +381,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -415,7 +415,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       labelText: 'Telefon nnummer',
                       labelStyle:
                       FlutterFlowTheme.of(context).labelLarge.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontSize: 18,
                       ),
                       hintText: 'Indtast telefon nummer...',
@@ -455,7 +455,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                       EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Nunito',
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
                     ),
@@ -525,7 +525,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Nunito',
                                 fontWeight: FontWeight.normal,
                               ),
                             ),

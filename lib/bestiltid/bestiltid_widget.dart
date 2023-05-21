@@ -133,7 +133,7 @@ class _BestiltidWidgetState extends State<BestiltidWidget> {
                       style: FlutterFlowTheme.of(context)
                           .headlineMedium
                           .override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Nunito',
                             color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
@@ -166,33 +166,33 @@ class _BestiltidWidgetState extends State<BestiltidWidget> {
                       titleStyle: FlutterFlowTheme.of(context)
                           .displaySmall
                           .override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Nunito',
                             color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 30.0,
                           ),
                       dayOfWeekStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Nunito',
                             color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 15.0,
                           ),
                       dateStyle: FlutterFlowTheme.of(context)
                           .bodyMedium
                           .override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Nunito',
                             color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 20.0,
                           ),
                       selectedDateStyle:
                           FlutterFlowTheme.of(context).bodyMedium.override(
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Nunito',
                                 color: Colors.white,
                                 fontSize: 22.0,
                               ),
                       inactiveDateStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).grayIcon,
                                 fontSize: 20.0,
                               ),
@@ -250,7 +250,7 @@ class _BestiltidWidgetState extends State<BestiltidWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: Color(0xFF008000),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Nunito',
                           color: Colors.white,
                           fontSize: 25.0,
                           fontWeight: FontWeight.bold,

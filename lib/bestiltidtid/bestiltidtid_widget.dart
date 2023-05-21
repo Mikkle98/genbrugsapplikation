@@ -322,7 +322,7 @@ class _BestiltidtidWidgetState extends State<BestiltidtidWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
                                                   .override(
-                                                    fontFamily: 'Poppins',
+                                                    fontFamily: 'Nunito',
                                                     color: Colors.white,
                                                     fontSize: 25.0,
                                                     fontWeight:

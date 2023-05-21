@@ -263,7 +263,7 @@ class _HomePageV2WidgetState extends State<HomePageV2Widget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Lexend Deca',
+                                            fontFamily: 'Nunito',
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,
                                             fontSize: 22.0,

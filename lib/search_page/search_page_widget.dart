@@ -117,7 +117,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
               title: Text(
                 'Ruteplanlægger',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Nunito',
                   color: Colors.white,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -275,7 +275,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                      fontFamily: 'Poppins',
+                                      fontFamily: 'Nunito',
                                       fontSize: 18,
                                       fontWeight: FontWeight.normal,
                                     ),
@@ -319,7 +319,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Nunito',
                               color: FlutterFlowTheme.of(context)
                                   .primaryBtnText,
                               fontWeight: FontWeight.bold,
@@ -330,7 +330,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Nunito',
                               color: FlutterFlowTheme.of(context)
                                   .primaryBtnText,
                               fontWeight: FontWeight.normal,
@@ -497,7 +497,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                       Text(
                                                                                         affaldNoSearchItem.genbrugsAffaldNavn!,
                                                                                         style: FlutterFlowTheme.of(context).headlineSmall.override(
-                                                                                          fontFamily: 'Outfit',
+                                                                                          fontFamily: 'Nunito',
                                                                                           color: Color(0xFF090F13),
                                                                                           fontSize: 20,
                                                                                           fontWeight: FontWeight.bold,
@@ -509,7 +509,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                           Text(
                                                                                             'Fraktion: ',
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Poppins',
+                                                                                              fontFamily: 'Nunito',
                                                                                               fontWeight: FontWeight.bold,
                                                                                             ),
                                                                                           ),
@@ -518,7 +518,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                             child: Text(
                                                                                               affaldNoSearchItem.genbrugsAffaldFraktion!,
                                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                                                                fontFamily: 'Outfit',
+                                                                                                fontFamily: 'Nunito',
                                                                                                 color: Color(0xFF7C8791),
                                                                                                 fontSize: 14,
                                                                                                 fontWeight: FontWeight.normal,
@@ -533,7 +533,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                           Text(
                                                                                             'Container:   ',
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                              fontFamily: 'Poppins',
+                                                                                              fontFamily: 'Nunito',
                                                                                               fontWeight: FontWeight.bold,
                                                                                             ),
                                                                                           ),
@@ -542,7 +542,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                             child: Text(
                                                                                               affaldNoSearchItem.genbrugsAffaldContainer!,
                                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                                                                fontFamily: 'Outfit',
+                                                                                                fontFamily: 'Nunito',
                                                                                                 color: Color(0xFFFF9100),
                                                                                                 fontSize: 14,
                                                                                                 fontWeight: FontWeight.normal,
@@ -556,7 +556,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                                         child: Text(
                                                                                           affaldNoSearchItem.genbrugsAffaldBidrag!,
                                                                                           style: FlutterFlowTheme.of(context).bodySmall.override(
-                                                                                            fontFamily: 'Outfit',
+                                                                                            fontFamily: 'Nunito',
                                                                                             color: FlutterFlowTheme.of(context).primaryBtnText,
                                                                                             fontSize: 1,
                                                                                             fontWeight: FontWeight.normal,
@@ -716,7 +716,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                   .headlineSmall
                                                                   .override(
                                                                 fontFamily:
-                                                                'Outfit',
+                                                                'Nunito',
                                                                 color: Color(
                                                                     0xFF090F13),
                                                                 fontSize:
@@ -738,7 +738,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                     fontFamily:
-                                                                    'Poppins',
+                                                                    'Nunito',
                                                                     fontWeight:
                                                                     FontWeight.bold,
                                                                   ),
@@ -758,7 +758,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                         .bodySmall
                                                                         .override(
                                                                       fontFamily:
-                                                                      'Outfit',
+                                                                      'Nunito',
                                                                       color:
                                                                       Color(0xFF7C8791),
                                                                       fontSize:
@@ -782,7 +782,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                       .bodyMedium
                                                                       .override(
                                                                     fontFamily:
-                                                                    'Poppins',
+                                                                    'Nunito',
                                                                     fontWeight:
                                                                     FontWeight.bold,
                                                                   ),
@@ -802,7 +802,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                         .bodySmall
                                                                         .override(
                                                                       fontFamily:
-                                                                      'Outfit',
+                                                                      'Nunito',
                                                                       color:
                                                                       Color(0xFFFF9100),
                                                                       fontSize:
@@ -830,7 +830,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                     .bodySmall
                                                                     .override(
                                                                   fontFamily:
-                                                                  'Outfit',
+                                                                  'Nunito',
                                                                   color: FlutterFlowTheme.of(
                                                                       context)
                                                                       .primaryBtnText,
@@ -899,7 +899,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                                                                   'Affald tilføjet til rute',
                                                                   style: GoogleFonts
                                                                       .getFont(
-                                                                    'Roboto',
+                                                                    'Nunito',
                                                                     color: FlutterFlowTheme.of(
                                                                         context)
                                                                         .primaryBtnText,
@@ -959,7 +959,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                           color: Color(0xFF228B22),
                           textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                            fontFamily: 'Poppins',
+                            fontFamily: 'Nunito',
                             color: Colors.white,
                             fontSize: 25,
                           ),

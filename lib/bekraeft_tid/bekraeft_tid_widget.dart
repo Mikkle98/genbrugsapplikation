@@ -155,7 +155,7 @@ class _BekraeftTidWidgetState extends State<BekraeftTidWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Nunito',
                                             fontSize: 22.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -247,7 +247,7 @@ class _BekraeftTidWidgetState extends State<BekraeftTidWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .titleMedium
                                                       .override(
-                                                        fontFamily: 'Poppins',
+                                                        fontFamily: 'Nunito',
                                                         fontSize: 22.0,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -388,7 +388,7 @@ class _BekraeftTidWidgetState extends State<BekraeftTidWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Poppins',
+                                  fontFamily: 'Nunito',
                                   color: Colors.white,
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
